@@ -1,0 +1,127 @@
+/* Header css */
+.header {
+	padding: 1rem 0px;
+	background: #026aa7;
+	color: #17394d;
+	font-size: 14px;
+	line-height: 20px;
+	position: fixed;
+	width: 100%;
+	height: 65px;
+	z-index: 5;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.header-text {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: #17394d;
+	cursor: pointer;
+	font-style: oblique;
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+	transition: .5s ease;
+}
+.header-text:hover {
+	color: #ffffff;
+}
+/* Banner css */
+.banner {
+	padding-top: 65px;
+	background: #faf3c0;
+	border-bottom: 1px solid #e7d6a7;
+	color: #3b372b;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 40px;
+	position: relative;
+	text-align: center;
+	word-wrap: break-word;
+}
+/* Body css */
+.body {
+	padding: 15px;
+	color: #ffffff;
+	font-weight: 400;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Board css */
+.board {
+	width: 400px;
+	margin: 0 4px;
+	height: 100%;
+	box-sizing: border-box;
+	vertical-align: top;
+	white-space: nowrap;
+}
+.list {
+	color: #17394d;
+	background-color: #dfe3e6;
+	border-radius: 3px;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	max-height: 100%;
+	position: relative;
+	white-space: normal;
+}
+.list-header {
+	flex: 0 0 auto;
+	padding: 6px 8px 3px;
+	position: relative;
+	min-height: 20px;
+}
+.header-title {
+	font-size: 16px;
+	font-weight: 700;
+	padding: 0 4px;
+}
+.list-cards {
+	flex: 1 1 auto;
+	margin-bottom: 0;
+	overflow-y: auto;
+	overflow-x: hidden;
+	margin: 0 4px;
+	padding: 0 4px;
+	z-index: 1;
+	min-height: 0;
+}
+.list-card:hover{
+  background-color: #f5f6f7;
+  border-bottom-color: rgba(9, 45, 66, .25)
+}
+.list-card {
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 rgba(9, 45, 66, .25);
+	cursor: pointer;
+	display: block;
+	margin-bottom: 8px;
+	max-width: 375px;
+	min-height: 20px;
+	position: relative;
+	text-decoration: none;
+	z-index: 0;
+}
+.list-card-details {
+	overflow: hidden;
+	padding: 6px 8px 2px;
+	position: relative;
+	z-index: 10;
+}
+/* Backlog css */
+.backlog {
+	display: inline-block;
+}
+/* Todo css */
+.todo {
+	display: inline-block;
+}
+/* Doing css */
+.doing {
+	display: inline-block;
+}
+
+/* Done css */
+.done {
+	display: inline-block;
+}
