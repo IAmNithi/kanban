@@ -1,3 +1,7 @@
+/* App css */
+.App{
+	width: 100%;
+}
 /* Header css */
 .header {
 	padding: 1rem 0px;
@@ -38,10 +42,25 @@
 }
 /* Body css */
 .body {
-	padding: 15px;
+	padding: 90px 15px 15px 15px;
 	color: #ffffff;
 	font-weight: 400;
 	font-family: Arial, Helvetica, sans-serif;
+	position: relative;
+    z-index: 2;
+    overflow-y: hidden;
+}
+.body-scroller{
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
 }
 
 /* Board css */
@@ -74,6 +93,10 @@
 	font-size: 16px;
 	font-weight: 700;
 	padding: 0 4px;
+}
+.list-cards-scroller{
+	max-height: 750px;
+	overflow-y: scroll;
 }
 .list-cards {
 	flex: 1 1 auto;
@@ -109,19 +132,33 @@
 	z-index: 10;
 }
 /* Backlog css */
-.backlog {
-	display: inline-block;
-}
-/* Todo css */
-.todo {
-	display: inline-block;
-}
-/* Doing css */
-.doing {
+.activityboard {
 	display: inline-block;
 }
 
-/* Done css */
-.done {
-	display: inline-block;
-}
+/* Scroll Bar css */
+::-webkit-scrollbar {
+	width: 10px; /* 1px wider than Lion. */
+	/* This is more usable for users trying to click it. */
+	background-color: rgba(0,0,0,0);
+	-webkit-border-radius: 100px;
+  }
+  /* hover effect for both scrollbar area, and scrollbar 'thumb' */
+  ::-webkit-scrollbar:hover {
+	background-color: rgba(0, 0, 0, 0.09);
+  }
+   
+  /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+  ::-webkit-scrollbar-thumb:vertical {
+	/* This is the EXACT color of Mac OS scrollbars. 
+	   Yes, I pulled out digital color meter */
+	background: rgba(0,0,0,0.5);
+	-webkit-border-radius: 100px;
+	background-clip: padding-box;
+	border: 2px solid rgba(0, 0, 0, 0);
+	min-height: 10px; /*Prevent it from getting too small */
+  }
+  ::-webkit-scrollbar-thumb:vertical:active {
+	background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+	-webkit-border-radius: 100px;
+  }

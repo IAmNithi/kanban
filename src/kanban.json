@@ -1,0 +1,203 @@
+{
+    "backlog": [
+        {
+            "Description": "Tinder for Local Restaurants - App that helps solve the problem of picking a fucking restaurant.",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "Progress Pics web app for dieters. Timestamps each photo. Eliminates fraud and it places a watermark on them.",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "Eat this. Not that. - Type in unhealthy food that youre craving and it gives you a list of healthy alternatives with recipes or options to buy online.",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "Spaced repition flashcard app for JS, HTML, CSS, ",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "Tell your significant other when your headed home for work.",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "An app that makes JS code snippet inserts more easy for non-technical people. Its gives us access to your websites and files and it auto-inserts for you.",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "Keto treatment. Charlie Foundation.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "Create one job description and well post it everywhere it belongs.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "Something similar to the flip eye glasses that eye doctors use to determine your vision except youre using websites to determine what style your clients like.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "An app that starts project flashcards onto your phone /web browser whenever your wife says she wants something to eat. Its food images of food categories or restaurants that help her narrow down to 1 option.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "Get more qualified applicants.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        }
+    ],
+    "Todo": [
+        {
+            "Description": "Derek Sivers on spaced repitition http://sivers.org/srs.",
+            "createdBy": "Kalanithi",
+            "Status": "Todo"
+        },
+        {
+            "Description": "ANKI Learning Method http://www.jackkinsella.ie/2011/12/05/janki-method.html.",
+            "createdBy": "Kalanithi",
+            "Status": "Todo"
+        }
+    ],
+    "Doing": [
+        {
+            "Description": "- requests a positive review first and then feeds that into social media.",
+            "createdBy": "Kalanithi",
+            "Status": "Doing"
+        },
+        {
+            "Description": "- uses the words unlock or level up to the bonus to some prize that is scarce (highest rated jerky of all time, secret flavor, secret style).",
+            "createdBy": "Kalanithi",
+            "Status": "Doing"
+        },
+        {
+            "Description": "- gives you some free bonus points and then you ad to it (reciprocity - I give you something, you give me something)",
+            "createdBy": "Kalanithi",
+            "Status": "Doing"
+        }
+    ],
+    "Done": [
+        {
+            "Description": "Keto treatment. Charlie Foundation.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "Create one job description and well post it everywhere it belongs.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "Something similar to the flip eye glasses that eye doctors use to determine your vision except youre using websites to determine what style your clients like.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "An app that starts project flashcards onto your phone /web browser whenever your wife says she wants something to eat. Its food images of food categories or restaurants that help her narrow down to 1 option.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "Get more qualified applicants.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        }
+    ],
+    "backlog2": [
+        {
+            "Description": "Tinder for Local Restaurants - App that helps solve the problem of picking a fucking restaurant.",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "Progress Pics web app for dieters. Timestamps each photo. Eliminates fraud and it places a watermark on them.",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "Eat this. Not that. - Type in unhealthy food that youre craving and it gives you a list of healthy alternatives with recipes or options to buy online.",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "Spaced repition flashcard app for JS, HTML, CSS, ",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "Tell your significant other when your headed home for work.",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        },
+        {
+            "Description": "An app that makes JS code snippet inserts more easy for non-technical people. Its gives us access to your websites and files and it auto-inserts for you.",
+            "createdBy": "Kalanithi",
+            "Status": "BackLog"
+        }
+    ],
+    "Todo2": [
+        {
+            "Description": "Derek Sivers on spaced repitition http://sivers.org/srs.",
+            "createdBy": "Kalanithi",
+            "Status": "Todo"
+        },
+        {
+            "Description": "ANKI Learning Method http://www.jackkinsella.ie/2011/12/05/janki-method.html.",
+            "createdBy": "Kalanithi",
+            "Status": "Todo"
+        }
+    ],
+    "Doing2": [
+        {
+            "Description": "- requests a positive review first and then feeds that into social media.",
+            "createdBy": "Kalanithi",
+            "Status": "Doing"
+        },
+        {
+            "Description": "- uses the words unlock or level up to the bonus to some prize that is scarce (highest rated jerky of all time, secret flavor, secret style).",
+            "createdBy": "Kalanithi",
+            "Status": "Doing"
+        },
+        {
+            "Description": "- gives you some free bonus points and then you ad to it (reciprocity - I give you something, you give me something)",
+            "createdBy": "Kalanithi",
+            "Status": "Doing"
+        }
+    ],
+    "Done2": [
+        {
+            "Description": "Keto treatment. Charlie Foundation.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "Create one job description and well post it everywhere it belongs.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "Something similar to the flip eye glasses that eye doctors use to determine your vision except youre using websites to determine what style your clients like.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "An app that starts project flashcards onto your phone /web browser whenever your wife says she wants something to eat. Its food images of food categories or restaurants that help her narrow down to 1 option.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        },
+        {
+            "Description": "Get more qualified applicants.",
+            "createdBy": "Kalanithi",
+            "Status": "Done"
+        }
+    ]
+}
