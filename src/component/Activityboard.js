@@ -17,19 +17,10 @@ export default class Activityboard extends Component {
         e.preventDefault();
     }
     onDragStart(ev, id){
-        console.log('dragstart: ',id);
         ev.dataTransfer.setData('id', id);
     }
-    onDrop = (ev, cat) => {       
-        // let id = ev.dataTransfer.getData("id");
-        // let tasks = this.state.tasks.filter((task) => {
-        //     if (task.name == id) {
-        //              task.category = cat;           
-        //     }              
-        //      return task;       
-        //  });    
+    onDrop = (ev, cat) => {     
         this.props.onDropEvent(ev, cat);
-
       }
     renderList(data, idx) {
         return <div className="list-cards" draggable key={idx} onDragStart={(e)=>this.onDragStart(e, data.id)}>
@@ -43,12 +34,12 @@ export default class Activityboard extends Component {
     render() {
         return (
             <div className="activityboard">
-                <div className="board">
+                <div className="board" onDragOver={(e)=>this.onDragOver(e)} onDrop={(e)=>{this.onDrop(e, this.state.listName)}}>
                     <div className="list">
                         <div className="list-header">
                             <div className="header-title">{this.state.listName}</div>
                         </div>
-                        <div className="list-cards-scroller"onDragOver={(e)=>this.onDragOver(e)} onDrop={(e)=>{this.onDrop(e, this.state.listName)}}>
+                        <div className="list-cards-scroller">
                         {this.state.listData.map((data, index) => {
                             return this.renderList(data, index);
                         })}

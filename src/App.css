@@ -29,16 +29,26 @@
 }
 /* Banner css */
 .banner {
-	padding-top: 65px;
-	background: #faf3c0;
-	border-bottom: 1px solid #e7d6a7;
-	color: #3b372b;
-	font-size: 14px;
+	padding: 10px;
 	font-weight: 700;
-	line-height: 40px;
-	position: relative;
-	text-align: center;
-	word-wrap: break-word;
+	text-align: right;
+}
+.btn-addlist{
+	color: #fff !important;
+  background-color: transparent !important;
+  border-color: transparent !important;
+	transition: all .15s ease;
+	font-weight: 700 !important;
+}
+.btn-addlist:hover{
+	color: #fff !important;
+  background-color: rgba(0,0,0,.3) !important;
+  -webkit-transform: translateY(-1px);
+  transform: translateY(-1px);
+  -webkit-box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+  -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 }
 /* Body css */
 .body {
@@ -161,4 +171,6 @@
   ::-webkit-scrollbar-thumb:vertical:active {
 	background: rgba(0,0,0,0.61); /* Some darker color when you click it */
 	-webkit-border-radius: 100px;
-  }
+	}
+	
+/* Add List Modal css */

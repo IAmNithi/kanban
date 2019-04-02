@@ -1,45 +1,50 @@
 import React, { Component } from 'react'
 import Activityboard from './Activityboard';
+import Banner from './Banner';
+import AddListModal from './AddListModal';
 const kanbanData = require('../kanban.json');
 let data = kanbanData;
 export default class Body extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      kanban: kanbanData
+      kanban: kanbanData,
+      openModal: false
     }
-    this.onDropEvent
-      = this.onDropEvent.bind(this)
+    this.onDropEvent = this.onDropEvent.bind(this);
+    this.toggleModal = this.toggleModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
   }
   onDropEvent(e, id) {
     let targetId = e.dataTransfer.getData("id");
-    console.log('printing data', data);
     let task = {};
     let testPass = false;
     for (let key in data) {
       if (testPass) {
-        if (key == id) {
-          data[key].push(task);
-          break;
-        }
+        break;
       } else {
         for (let i = 0; i < data[key].length; i++) {
-          console.log('inside loop', data[key][i]);
-          if (data[key][i].id == targetId) {
+          if (data[key][i].id === parseInt(targetId)) {
             task = data[key][i];
-            delete data[key][i];
+            data[key].splice([i], 1);
             testPass = true;
             break;
           }
         }
       }
     }
+    this.updateBoard(task, id);
+  }
+  updateBoard(task, id){
+    for(let key in data) {
+      if (key === id) {
+        data[key].push(task);
+        break;
+      }
+    }
     this.setState({
       kanban: data
-    }, function () {
-      console.log('printing async  func', this.state.kanban);
     })
-    console.log(task);
   }
   renderList() {
     const activityList = [];
@@ -50,10 +55,22 @@ export default class Body extends Component {
       {activityList}
     </div>
   }
+  toggleModal(){
+    this.setState({
+      openModal: true
+    })
+  }
+  closeModal(){
+    this.setState({
+      openModal: false
+    })
+  }
   render() {
     // this.renderList();
     return (
       <div className="body">
+      <Banner openModal={this.toggleModal}/>
+      <AddListModal modalStatus={this.state.openModal} closeModal={this.closeModal}/>
         {
           this.renderList()
         }
