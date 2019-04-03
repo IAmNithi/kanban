@@ -4,7 +4,7 @@ import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 export default class CreateEditCard extends Component {
     constructor(props) {
         super(props);
-        this.state = { modal: props.modalStatus, Description: '', createdBy: '', id: 45, listName: props.listName };
+        this.state = { modal: props.modalStatus, Description: '', createdBy: '', listName: props.listName };
         this.toggle = this.toggle.bind(this);
         this.handleChangeName = this.handleChangeName.bind(this);
     }
@@ -23,10 +23,13 @@ export default class CreateEditCard extends Component {
         this.setState({ [event.target.name]: event.target.value });
     }
     handleSubmit() {
+        const maximum = 10000;
+const minimum = 45;
+const randomnumber = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
         const newCard = {
             Description: this.state.Description,
             createdBy: this.state.createdBy,
-            id: this.state.id
+            id: randomnumber
         }
         this.props.createCard(newCard, this.state.listName);
         this.toggle();
@@ -43,9 +46,6 @@ export default class CreateEditCard extends Component {
                             </div>
                             <div className="form-group col-12">
                                 <input type="text" value={this.state.createdBy} name="createdBy" placeholder="createdBy" onChange={(e) => this.handleChangeName(e)} className="form-control" />
-                            </div>
-                            <div className="form-group col-12">
-                                <input type="text" value={this.state.id} placeholder="id" name="id" onChange={(e) => this.handleChangeName(e)} className="form-control" />
                             </div>
                         </div>
                     </ModalBody>
