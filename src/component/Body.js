@@ -16,6 +16,7 @@ export default class Body extends Component {
     this.closeModal = this.closeModal.bind(this);
     this.createNewList = this.createNewList.bind(this);
     this.createNewCard = this.createNewCard.bind(this);
+    this.deleteCard = this.deleteCard.bind(this);
   }
   onDropEvent(e, id) {
     let targetId = e.dataTransfer.getData("id");
@@ -26,7 +27,7 @@ export default class Body extends Component {
         break;
       } else {
         for (let i = 0; i < data[key].length; i++) {
-          if (data[key][i].id === parseInt(targetId)) {
+          if (parseInt(data[key][i].id) === parseInt(targetId)) {
             task = data[key][i];
             data[key].splice([i], 1);
             testPass = true;
@@ -38,9 +39,22 @@ export default class Body extends Component {
     this.updateBoard(task, id);
   }
   updateBoard(task, id){
+    if(task.id !== undefined) {
+      for(let key in data) {
+        if (key === id) {
+          data[key].push(task);
+          break;
+        }
+      }
+      this.setState({
+        kanban: data
+      })
+    }
+  }
+  createNewCard(desc, id){
     for(let key in data) {
       if (key === id) {
-        data[key].push(task);
+        data[key].push(desc);
         break;
       }
     }
@@ -48,11 +62,21 @@ export default class Body extends Component {
       kanban: data
     })
   }
-  createNewCard(desc, list){
-    for(let key in data) {
-      if (key === list) {
-        data[key].push(desc);
+  deleteCard(id, list){
+    let testPass = false;
+    for(let key in data){
+      if(testPass) {
         break;
+      } else {
+        if(key === list){
+          testPass = true;
+          for(let i=0; i< data[key].length; i++){
+            if(data[key][i].id === parseInt(id)){
+              data[key].splice([i], 1);
+              break;
+            }
+          }
+        }
       }
     }
     this.setState({
@@ -62,7 +86,7 @@ export default class Body extends Component {
   renderList() {
     const activityList = [];
     for (let key in this.state.kanban) {
-      activityList.push(<Activityboard backlogData={this.state.kanban[key]} listName={key} key={key} onDropEvent={this.onDropEvent} createCardBody={this.createNewCard}/>)
+      activityList.push(<Activityboard backlogData={this.state.kanban[key]} listName={key} key={key} onDropEvent={this.onDropEvent} createCardBody={this.createNewCard} deleteCardData={this.deleteCard}/>)
     }
     return <div className="body-scroller">
       {activityList}

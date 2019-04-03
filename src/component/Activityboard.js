@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CreateEditCard from './CreateEditCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default class Activityboard extends Component {
     constructor(props) {
         super(props);
@@ -11,6 +12,7 @@ export default class Activityboard extends Component {
         this.toggleModal = this.toggleModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.createNewCard = this.createNewCard.bind(this);
+        this.deleteCard = this.deleteCard.bind(this);
     }
     componentWillReceiveProps(nextProps) {
         this.setState({
@@ -26,9 +28,19 @@ export default class Activityboard extends Component {
     onDrop = (ev, cat) => {
         this.props.onDropEvent(ev, cat);
     }
+    deleteCard(e, id) {
+        e.preventDefault();
+        this.props.deleteCardData(id, this.state.listName);
+    }
     renderList(data, idx) {
         return <div className="list-cards" key={idx}>
             <div className="list-card" draggable onDragStart={(e) => this.onDragStart(e, data.id)}>
+                <div className="list-card-header">
+                    <FontAwesomeIcon
+                    onClick={(e) => this.deleteCard(e, data.id)}
+                        icon="trash"
+                    />
+                </div>
                 <div className="list-card-details">
                     {data.Description}
                 </div>
@@ -45,14 +57,14 @@ export default class Activityboard extends Component {
             openModal: false
         })
     }
-    createNewCard(e, list){
+    createNewCard(e, list) {
         console.log('printing  in activity dashboard', e, list);
         this.props.createCardBody(e, list);
     }
     render() {
         return (
             <div className="activityboard">
-                <CreateEditCard modalStatus={this.state.openModal} listName={this.state.listName} closeModal={this.closeModal} createCard={this.createNewCard}/>
+                <CreateEditCard modalStatus={this.state.openModal} listName={this.state.listName} closeModal={this.closeModal} createCard={this.createNewCard} />
                 <div className="board" onDragOver={(e) => this.onDragOver(e)} onDrop={(e) => { this.onDrop(e, this.state.listName) }}>
                     <div className="list">
                         <div className="list-header">

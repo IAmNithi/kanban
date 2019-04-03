@@ -1,5 +1,5 @@
 /* App css */
-.App{
+.App {
 	width: 100%;
 }
 /* Header css */
@@ -33,22 +33,24 @@
 	font-weight: 700;
 	text-align: right;
 }
-.btn-addlist{
+.btn-addlist {
 	color: #fff !important;
-  background-color: transparent !important;
-  border-color: transparent !important;
+	background-color: transparent !important;
+	border-color: transparent !important;
 	transition: all .15s ease;
 	font-weight: 700 !important;
 }
-.btn-addlist:hover{
+.btn-addlist:hover {
 	color: #fff !important;
-  background-color: rgba(0,0,0,.3) !important;
-  -webkit-transform: translateY(-1px);
-  transform: translateY(-1px);
-  -webkit-box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
-  box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
-  -webkit-box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
-  box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+	background-color: rgba(0, 0, 0, .3) !important;
+	-webkit-transform: translateY(-1px);
+	transform: translateY(-1px);
+	-webkit-box-shadow: 0 13px 27px -5px rgba(50, 50, 93, .25), 0 8px 16px -8px rgba(0, 0, 0, .3),
+		0 -6px 16px -6px rgba(0, 0, 0, .025);
+	box-shadow: 0 13px 27px -5px rgba(50, 50, 93, .25), 0 8px 16px -8px rgba(0, 0, 0, .3),
+		0 -6px 16px -6px rgba(0, 0, 0, .025);
+	-webkit-box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+	box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
 }
 /* Body css */
 .body {
@@ -57,20 +59,20 @@
 	font-weight: 400;
 	font-family: Arial, Helvetica, sans-serif;
 	position: relative;
-    z-index: 2;
-    overflow-y: hidden;
+	z-index: 2;
+	overflow-y: hidden;
 }
-.body-scroller{
+.body-scroller {
 	display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: nowrap;
-    flex-wrap: nowrap;
-    padding-bottom: 1rem;
-    margin-top: -1px;
-    overflow-x: auto;
-    text-align: center;
-    white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
+	display: flex;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	padding-bottom: 1rem;
+	margin-top: -1px;
+	overflow-x: auto;
+	text-align: center;
+	white-space: nowrap;
+	-webkit-overflow-scrolling: touch;
 }
 
 /* Board css */
@@ -104,7 +106,7 @@
 	font-weight: 700;
 	padding: 0 4px;
 }
-.list-cards-scroller{
+.list-cards-scroller {
 	max-height: 750px;
 	overflow-y: scroll;
 }
@@ -118,9 +120,9 @@
 	z-index: 1;
 	min-height: 0;
 }
-.list-card:hover{
-  background-color: #f5f6f7;
-  border-bottom-color: rgba(9, 45, 66, .25)
+.list-card:hover {
+	background-color: #f5f6f7;
+	border-bottom-color: rgba(9, 45, 66, .25);
 }
 .list-card {
 	background-color: #fff;
@@ -141,15 +143,19 @@
 	position: relative;
 	z-index: 10;
 }
-.create-new-link{
+.create-new-link {
 	color: #17394d;
 	padding-bottom: 5px;
 	font-weight: 500;
 }
-.create-new-link:hover{
+.create-new-link:hover {
 	text-decoration: none;
 	color: #17394d;
 	cursor: pointer;
+}
+.list-card-header {
+	text-align: right;
+	padding: 0px 10px;
 }
 
 /* Backlog css */
@@ -161,27 +167,27 @@
 ::-webkit-scrollbar {
 	width: 10px; /* 1px wider than Lion. */
 	/* This is more usable for users trying to click it. */
-	background-color: rgba(0,0,0,0);
+	background-color: rgba(0, 0, 0, 0);
 	-webkit-border-radius: 100px;
-  }
-  /* hover effect for both scrollbar area, and scrollbar 'thumb' */
-  ::-webkit-scrollbar:hover {
+}
+/* hover effect for both scrollbar area, and scrollbar 'thumb' */
+::-webkit-scrollbar:hover {
 	background-color: rgba(0, 0, 0, 0.09);
-  }
-   
-  /* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
-  ::-webkit-scrollbar-thumb:vertical {
+}
+
+/* The scrollbar 'thumb' ...that marque oval shape in a scrollbar */
+::-webkit-scrollbar-thumb:vertical {
 	/* This is the EXACT color of Mac OS scrollbars. 
 	   Yes, I pulled out digital color meter */
-	background: rgba(0,0,0,0.5);
+	background: rgba(0, 0, 0, 0.5);
 	-webkit-border-radius: 100px;
 	background-clip: padding-box;
 	border: 2px solid rgba(0, 0, 0, 0);
 	min-height: 10px; /*Prevent it from getting too small */
-  }
-  ::-webkit-scrollbar-thumb:vertical:active {
-	background: rgba(0,0,0,0.61); /* Some darker color when you click it */
+}
+::-webkit-scrollbar-thumb:vertical:active {
+	background: rgba(0, 0, 0, 0.61); /* Some darker color when you click it */
 	-webkit-border-radius: 100px;
-	}
-	
+}
+
 /* Add List Modal css */
