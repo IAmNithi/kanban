@@ -7,12 +7,15 @@ export default class Activityboard extends Component {
         this.state = {
             listData: props.backlogData,
             listName: props.listName,
-            openModal: false
+            openModal: false,
+            modalType: '',
+            cardPassData: {}
         }
         this.toggleModal = this.toggleModal.bind(this);
         this.closeModal = this.closeModal.bind(this);
         this.createNewCard = this.createNewCard.bind(this);
         this.deleteCard = this.deleteCard.bind(this);
+        this.editCard = this.editCard.bind(this);
     }
     componentWillReceiveProps(nextProps) {
         this.setState({
@@ -32,10 +35,26 @@ export default class Activityboard extends Component {
         e.preventDefault();
         this.props.deleteCardData(id, this.state.listName);
     }
+    editCard(e, data){
+        e.preventDefault();
+        this.setState({
+            openModal: true,
+            modalType: 'edit',
+            cardPassData: data
+        }, function(){
+        this.deleteCard(e, data.id);
+        })
+    }
     renderList(data, idx) {
         return <div className="list-cards" key={idx}>
             <div className="list-card" draggable onDragStart={(e) => this.onDragStart(e, data.id)}>
                 <div className="list-card-header">
+                <div className="pr-2 pen-display">
+                <FontAwesomeIcon
+                    onClick={(e) => this.editCard(e, data)}
+                        icon="pen"
+                    />
+                    </div>
                     <FontAwesomeIcon
                     onClick={(e) => this.deleteCard(e, data.id)}
                         icon="trash"
@@ -49,7 +68,9 @@ export default class Activityboard extends Component {
     }
     toggleModal() {
         this.setState({
-            openModal: true
+            openModal: true,
+            modalType: 'add',
+            cardPassData: {}
         })
     }
     closeModal() {
@@ -58,13 +79,12 @@ export default class Activityboard extends Component {
         })
     }
     createNewCard(e, list) {
-        console.log('printing  in activity dashboard', e, list);
         this.props.createCardBody(e, list);
     }
     render() {
         return (
             <div className="activityboard">
-                <CreateEditCard modalStatus={this.state.openModal} listName={this.state.listName} closeModal={this.closeModal} createCard={this.createNewCard} />
+                <CreateEditCard modalStatus={this.state.openModal} listName={this.state.listName} closeModal={this.closeModal} modalType={this.state.modalType} createCard={this.createNewCard} cardData={this.state.cardPassData}/>
                 <div className="board" onDragOver={(e) => this.onDragOver(e)} onDrop={(e) => { this.onDrop(e, this.state.listName) }}>
                     <div className="list">
                         <div className="list-header">

@@ -21,12 +21,10 @@ export default class AddListModal extends Component {
         this.props.closeModal();
     }
     handleChangeName(event) {
-        console.log(event.target.value)
         this.setState({ name: event.target.value });
     }
 
     handleSubmit() {
-        console.log('printing name', this.state.name);
         this.props.createList(this.state.name);
         this.toggle();
     }

@@ -103,14 +103,7 @@ export default class Body extends Component {
     })
   }
   createNewList(e){
-    // const object2 = Object.assign(data, e = {});
-    // data.push(e);
-    console.log(data);
-    //  this.setState({
-    //   kanban: data
-    //  }, function(){
-    //    console.log(this.state.kanban);
-    //  });
+    console.log('Under Construction !!!');
   }
   render() {
     // this.renderList();
