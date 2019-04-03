@@ -141,6 +141,17 @@
 	position: relative;
 	z-index: 10;
 }
+.create-new-link{
+	color: #17394d;
+	padding-bottom: 5px;
+	font-weight: 500;
+}
+.create-new-link:hover{
+	text-decoration: none;
+	color: #17394d;
+	cursor: pointer;
+}
+
 /* Backlog css */
 .activityboard {
 	display: inline-block;

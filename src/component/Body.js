@@ -14,6 +14,8 @@ export default class Body extends Component {
     this.onDropEvent = this.onDropEvent.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.closeModal = this.closeModal.bind(this);
+    this.createNewList = this.createNewList.bind(this);
+    this.createNewCard = this.createNewCard.bind(this);
   }
   onDropEvent(e, id) {
     let targetId = e.dataTransfer.getData("id");
@@ -46,10 +48,21 @@ export default class Body extends Component {
       kanban: data
     })
   }
+  createNewCard(desc, list){
+    for(let key in data) {
+      if (key === list) {
+        data[key].push(desc);
+        break;
+      }
+    }
+    this.setState({
+      kanban: data
+    })
+  }
   renderList() {
     const activityList = [];
     for (let key in this.state.kanban) {
-      activityList.push(<Activityboard backlogData={this.state.kanban[key]} listName={key} key={key} onDropEvent={this.onDropEvent} />)
+      activityList.push(<Activityboard backlogData={this.state.kanban[key]} listName={key} key={key} onDropEvent={this.onDropEvent} createCardBody={this.createNewCard}/>)
     }
     return <div className="body-scroller">
       {activityList}
@@ -65,12 +78,22 @@ export default class Body extends Component {
       openModal: false
     })
   }
+  createNewList(e){
+    // const object2 = Object.assign(data, e = {});
+    // data.push(e);
+    console.log(data);
+    //  this.setState({
+    //   kanban: data
+    //  }, function(){
+    //    console.log(this.state.kanban);
+    //  });
+  }
   render() {
     // this.renderList();
     return (
       <div className="body">
       <Banner openModal={this.toggleModal}/>
-      <AddListModal modalStatus={this.state.openModal} closeModal={this.closeModal}/>
+      <AddListModal modalStatus={this.state.openModal} closeModal={this.closeModal} createList={this.createNewList}/>
         {
           this.renderList()
         }

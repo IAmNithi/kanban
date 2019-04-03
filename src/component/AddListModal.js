@@ -27,6 +27,8 @@ export default class AddListModal extends Component {
 
     handleSubmit() {
         console.log('printing name', this.state.name);
+        this.props.createList(this.state.name);
+        this.toggle();
     }
     render() {
         return (
