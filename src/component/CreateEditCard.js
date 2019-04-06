@@ -14,14 +14,14 @@ export default class CreateEditCard extends Component {
                 modal: nextProps.modalStatus,
                 modalStatus: nextProps.modalType,
                 Description: nextProps.cardData.Description, 
-                createdBy: nextProps.cardData.createdBy,
+                createdBy: nextProps.cardData.createdBy
             });
         } else {
             this.setState({
                 modal: nextProps.modalStatus,
                 modalStatus: nextProps.modalType,
                 Description: '', 
-                createdBy: '',
+                createdBy: ''
             });
         }
     }
@@ -41,7 +41,8 @@ export default class CreateEditCard extends Component {
         const newCard = {
             Description: this.state.Description,
             createdBy: this.state.createdBy,
-            id: randomnumber
+            id: randomnumber,
+            comments: []
         }
         this.props.createCard(newCard, this.state.listName);
         this.toggle();

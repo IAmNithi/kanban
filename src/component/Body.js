@@ -42,7 +42,7 @@ export default class Body extends Component {
     if(task.id !== undefined) {
       for(let key in data) {
         if (key === id) {
-          data[key].push(task);
+          data[key].unshift(task);
           break;
         }
       }
@@ -54,7 +54,7 @@ export default class Body extends Component {
   createNewCard(desc, id){
     for(let key in data) {
       if (key === id) {
-        data[key].push(desc);
+        data[key].unshift(desc);
         break;
       }
     }
@@ -103,7 +103,12 @@ export default class Body extends Component {
     })
   }
   createNewList(e){
-    console.log('Under Construction !!!');
+    let sampleData =  {};
+    sampleData[e] = [];
+    data = Object.assign({},this.state.kanban,sampleData);
+    this.setState({
+      kanban: data
+    });
   }
   render() {
     // this.renderList();

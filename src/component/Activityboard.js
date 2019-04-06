@@ -35,34 +35,45 @@ export default class Activityboard extends Component {
         e.preventDefault();
         this.props.deleteCardData(id, this.state.listName);
     }
-    editCard(e, data){
+    editCard(e, data) {
         e.preventDefault();
         this.setState({
             openModal: true,
             modalType: 'edit',
             cardPassData: data
-        }, function(){
-        this.deleteCard(e, data.id);
+        }, function () {
+            this.deleteCard(e, data.id);
         })
     }
     renderList(data, idx) {
         return <div className="list-cards" key={idx}>
             <div className="list-card" draggable onDragStart={(e) => this.onDragStart(e, data.id)}>
-                <div className="list-card-header">
-                <div className="pr-2 pen-display">
-                <FontAwesomeIcon
-                    onClick={(e) => this.editCard(e, data)}
-                        icon="pen"
-                    />
+                {/* <div className="list-card-header">
+                    <div className="pr-2 pen-display">
+                        <FontAwesomeIcon
+                            onClick={(e) => this.editCard(e, data)}
+                            icon="pen"
+                        />
                     </div>
                     <FontAwesomeIcon
-                    onClick={(e) => this.deleteCard(e, data.id)}
+                        onClick={(e) => this.deleteCard(e, data.id)}
                         icon="trash"
                     />
-                </div>
+                </div> */}
                 <div className="list-card-details">
                     {data.Description}
                 </div>
+                {data.comments.length !== 0 ?
+                    <div className="list-card-comment text-left">
+                        <div className="comment-tag">
+                            Comments
+                        </div>
+                        {data.comments.map((da, ind) => 
+                        <div className="comments-body text-muted" key={ind}>
+                            {da}
+                        </div>)}
+                    </div>
+                : ''}
             </div>
         </div>
     }
@@ -84,7 +95,7 @@ export default class Activityboard extends Component {
     render() {
         return (
             <div className="activityboard">
-                <CreateEditCard modalStatus={this.state.openModal} listName={this.state.listName} closeModal={this.closeModal} modalType={this.state.modalType} createCard={this.createNewCard} cardData={this.state.cardPassData}/>
+                <CreateEditCard modalStatus={this.state.openModal} listName={this.state.listName} closeModal={this.closeModal} modalType={this.state.modalType} createCard={this.createNewCard} cardData={this.state.cardPassData} />
                 <div className="board" onDragOver={(e) => this.onDragOver(e)} onDrop={(e) => { this.onDrop(e, this.state.listName) }}>
                     <div className="list">
                         <div className="list-header">
@@ -95,8 +106,8 @@ export default class Activityboard extends Component {
                                 return this.renderList(data, index);
                             })}
                         </div>
-                        <span onClick={(e) => this.toggleModal(e)} href="#" draggable={false} className="create-new-link">
-                            Create Task
+                        <span onClick={(e) => this.toggleModal(e)} href="#" draggable={false} className="create-new-link text-muted text-left">
+                            Add a Card...
                         </span>
                     </div>
                 </div>

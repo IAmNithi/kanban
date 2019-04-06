@@ -3,196 +3,232 @@
         {
             "Description": "Tinder for Local Restaurants - App that helps solve the problem of picking a restaurant.",
             "createdBy": "Kalanithi",
-            "id": 1
+            "id": 1,
+            "comments": ["test comment", "test comment 2"]
         },
         {
             "Description": "Progress Pics web app for dieters. Timestamps each photo. Eliminates fraud and it places a watermark on them.",
             "createdBy": "Kalanithi",
-            "id": 2
+            "id": 2,
+            "comments": []
         },
         {
             "Description": "Eat this. Not that. - Type in unhealthy food that youre craving and it gives you a list of healthy alternatives with recipes or options to buy online.",
             "createdBy": "Kalanithi",
-            "id": 3
+            "id": 3,
+            "comments": []
         },
         {
             "Description": "Spaced repition flashcard app for JS, HTML, CSS, ",
             "createdBy": "Kalanithi",
-            "id": 4
+            "id": 4,
+            "comments": []
         },
         {
             "Description": "Tell your significant other when your headed home for work.",
             "createdBy": "Kalanithi",
-            "id": 5
+            "id": 5,
+            "comments": []
         },
         {
             "Description": "An app that makes JS code snippet inserts more easy for non-technical people. Its gives us access to your websites and files and it auto-inserts for you.",
             "createdBy": "Kalanithi",
-            "id": 6
+            "id": 6,
+            "comments": []
         },
         {
             "Description": "Keto treatment. Charlie Foundation.",
             "createdBy": "Kalanithi",
-            "id": 7
+            "id": 7,
+            "comments": []
         },
         {
             "Description": "Create one job description and well post it everywhere it belongs.",
             "createdBy": "Kalanithi",
-            "id": 8
+            "id": 8,
+            "comments": []
         },
         {
             "Description": "Something similar to the flip eye glasses that eye doctors use to determine your vision except youre using websites to determine what style your clients like.",
             "createdBy": "Kalanithi",
-            "id": 9
+            "id": 9,
+            "comments": []
         },
         {
             "Description": "An app that starts project flashcards onto your phone /web browser whenever your wife says she wants something to eat. Its food images of food categories or restaurants that help her narrow down to 1 option.",
             "createdBy": "Kalanithi",
-            "id": 10
+            "id": 10,
+            "comments": []
         },
         {
             "Description": "Get more qualified applicants.",
             "createdBy": "Kalanithi",
-            "id": 11
+            "id": 11,
+            "comments": []
         }
     ],
     "Todo": [
         {
             "Description": "Derek Sivers on spaced repitition http://sivers.org/srs.",
             "createdBy": "Kalanithi",
-            "id": 12
+            "id": 12,
+            "comments": []
         },
         {
             "Description": "ANKI Learning Method http://www.jackkinsella.ie/2011/12/05/janki-method.html.",
             "createdBy": "Kalanithi",
-            "id": 13
+            "id": 13,
+            "comments": []
         }
     ],
     "Doing": [
         {
             "Description": "- requests a positive review first and then feeds that into social media.",
             "createdBy": "Kalanithi",
-            "id": 14
+            "id": 14,
+            "comments": []
         },
         {
             "Description": "- uses the words unlock or level up to the bonus to some prize that is scarce (highest rated jerky of all time, secret flavor, secret style).",
             "createdBy": "Kalanithi",
-            "id": 15
+            "id": 15,
+            "comments": []
         },
         {
             "Description": "- gives you some free bonus points and then you ad to it (reciprocity - I give you something, you give me something)",
             "createdBy": "Kalanithi",
-            "id": 16
+            "id": 16,
+            "comments": []
         }
     ],
     "Done": [
         {
             "Description": "Keto treatment. Charlie Foundation.",
             "createdBy": "Kalanithi",
-            "id": 17
+            "id": 17,
+            "comments": []
         },
         {
             "Description": "Create one job description and well post it everywhere it belongs.",
             "createdBy": "Kalanithi",
-            "id": 18
+            "id": 18,
+            "comments": []
         },
         {
             "Description": "Something similar to the flip eye glasses that eye doctors use to determine your vision except youre using websites to determine what style your clients like.",
             "createdBy": "Kalanithi",
-            "id": 19
+            "id": 19,
+            "comments": []
         },
         {
             "Description": "An app that starts project flashcards onto your phone /web browser whenever your wife says she wants something to eat. Its food images of food categories or restaurants that help her narrow down to 1 option.",
             "createdBy": "Kalanithi",
-            "id": 20
+            "id": 20,
+            "comments": []
         },
         {
             "Description": "Get more qualified applicants.",
             "createdBy": "Kalanithi",
-            "id": 21
+            "id": 21,
+            "comments": []
         }
     ],
     "backlog2": [
         {
             "Description": "Tinder for Local Restaurants - App that helps solve the problem of picking a restaurant.",
             "createdBy": "Kalanithi",
-            "id": 22
+            "id": 22,
+            "comments": []
         },
         {
             "Description": "Progress Pics web app for dieters. Timestamps each photo. Eliminates fraud and it places a watermark on them.",
             "createdBy": "Kalanithi",
-            "id": 23
+            "id": 23,
+            "comments": []
         },
         {
             "Description": "Eat this. Not that. - Type in unhealthy food that youre craving and it gives you a list of healthy alternatives with recipes or options to buy online.",
             "createdBy": "Kalanithi",
-            "id": 24
+            "id": 24,
+            "comments": []
         },
         {
             "Description": "Spaced repition flashcard app for JS, HTML, CSS, ",
             "createdBy": "Kalanithi",
-            "id": 25
+            "id": 25,
+            "comments": []
         },
         {
             "Description": "Tell your significant other when your headed home for work.",
             "createdBy": "Kalanithi",
-            "id": 26
+            "id": 26,
+            "comments": []
         },
         {
             "Description": "An app that makes JS code snippet inserts more easy for non-technical people. Its gives us access to your websites and files and it auto-inserts for you.",
             "createdBy": "Kalanithi",
-            "id": 27
+            "id": 27,
+            "comments": []
         }
     ],
     "Todo2": [
         {
             "Description": "Derek Sivers on spaced repitition http://sivers.org/srs.",
             "createdBy": "Kalanithi",
-            "id": 28
+            "id": 28,
+            "comments": []
         }
     ],
     "Doing2": [
         {
             "Description": "- requests a positive review first and then feeds that into social media.",
             "createdBy": "Kalanithi",
-            "id": 30
+            "id": 30,
+            "comments": []
         },
         {
             "Description": "- uses the words unlock or level up to the bonus to some prize that is scarce (highest rated jerky of all time, secret flavor, secret style).",
             "createdBy": "Kalanithi",
-            "id": 31
+            "id": 31,
+            "comments": []
         },
         {
             "Description": "- gives you some free bonus points and then you ad to it (reciprocity - I give you something, you give me something)",
             "createdBy": "Kalanithi",
-            "id": 32
+            "id": 32,
+            "comments": []
         }
     ],
     "Done2": [
         {
             "Description": "Keto treatment. Charlie Foundation.",
             "createdBy": "Kalanithi",
-            "id": 33
+            "id": 33,
+            "comments": []
         },
         {
             "Description": "Create one job description and well post it everywhere it belongs.",
             "createdBy": "Kalanithi",
-            "id": 34
+            "id": 34,
+            "comments": []
         },
         {
             "Description": "Something similar to the flip eye glasses that eye doctors use to determine your vision except youre using websites to determine what style your clients like.",
             "createdBy": "Kalanithi",
-            "id": 35
+            "id": 35,
+            "comments": []
         },
         {
             "Description": "An app that starts project flashcards onto your phone /web browser whenever your wife says she wants something to eat. Its food images of food categories or restaurants that help her narrow down to 1 option.",
             "createdBy": "Kalanithi",
-            "id": 36
+            "id": 36,
+            "comments": []
         },
         {
             "Description": "Get more qualified applicants.",
             "createdBy": "Kalanithi",
-            "id": 37
+            "id": 37,
+            "comments": []
         }
     ]
 }
