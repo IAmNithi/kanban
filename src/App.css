@@ -212,4 +212,12 @@
 	-webkit-border-radius: 100px;
 }
 
-/* Add List Modal css */
+/* create Edit card Modal css */
+.edit-name{
+	cursor: pointer;
+	color: #026aa7;
+}
+.edit-name:hover{
+	text-decoration: underline;
+	color: #026aa7;
+}

@@ -17,6 +17,7 @@ export default class Body extends Component {
     this.createNewList = this.createNewList.bind(this);
     this.createNewCard = this.createNewCard.bind(this);
     this.deleteCard = this.deleteCard.bind(this);
+    this.updateCard = this.updateCard.bind(this);
   }
   onDropEvent(e, id) {
     let targetId = e.dataTransfer.getData("id");
@@ -62,6 +63,22 @@ export default class Body extends Component {
       kanban: data
     })
   }
+  updateCard(desc, id){
+    for(let key in data) {
+      if (key === id) {
+        for(let i=0; i<data[key].length; i++){
+          if(parseInt(data[key][i].id) === parseInt(desc.id)){
+            data[key].splice([i], 1);
+            data[key].unshift(desc);
+            break;
+          }
+        }
+      }
+    }
+    this.setState({
+      kanban: data
+    })
+  }
   deleteCard(id, list){
     let testPass = false;
     for(let key in data){
@@ -86,7 +103,7 @@ export default class Body extends Component {
   renderList() {
     const activityList = [];
     for (let key in this.state.kanban) {
-      activityList.push(<Activityboard backlogData={this.state.kanban[key]} listName={key} key={key} onDropEvent={this.onDropEvent} createCardBody={this.createNewCard} deleteCardData={this.deleteCard}/>)
+      activityList.push(<Activityboard backlogData={this.state.kanban[key]} listName={key} key={key} onDropEvent={this.onDropEvent} createCardBody={this.createNewCard} updateCard={this.updateCard} deleteCardData={this.deleteCard}/>)
     }
     return <div className="body-scroller">
       {activityList}

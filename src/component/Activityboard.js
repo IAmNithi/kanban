@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import CreateEditCard from './CreateEditCard';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 export default class Activityboard extends Component {
     constructor(props) {
         super(props);
@@ -16,6 +15,7 @@ export default class Activityboard extends Component {
         this.createNewCard = this.createNewCard.bind(this);
         this.deleteCard = this.deleteCard.bind(this);
         this.editCard = this.editCard.bind(this);
+        this.updateCard = this.updateCard.bind(this);
     }
     componentWillReceiveProps(nextProps) {
         this.setState({
@@ -31,9 +31,8 @@ export default class Activityboard extends Component {
     onDrop = (ev, cat) => {
         this.props.onDropEvent(ev, cat);
     }
-    deleteCard(e, id) {
-        e.preventDefault();
-        this.props.deleteCardData(id, this.state.listName);
+    deleteCard(id, listName) {
+        this.props.deleteCardData(id, listName);
     }
     editCard(e, data) {
         e.preventDefault();
@@ -41,25 +40,11 @@ export default class Activityboard extends Component {
             openModal: true,
             modalType: 'edit',
             cardPassData: data
-        }, function () {
-            this.deleteCard(e, data.id);
         })
     }
     renderList(data, idx) {
         return <div className="list-cards" key={idx}>
-            <div className="list-card" draggable onDragStart={(e) => this.onDragStart(e, data.id)}>
-                {/* <div className="list-card-header">
-                    <div className="pr-2 pen-display">
-                        <FontAwesomeIcon
-                            onClick={(e) => this.editCard(e, data)}
-                            icon="pen"
-                        />
-                    </div>
-                    <FontAwesomeIcon
-                        onClick={(e) => this.deleteCard(e, data.id)}
-                        icon="trash"
-                    />
-                </div> */}
+            <div className="list-card" draggable onDragStart={(e) => this.onDragStart(e, data.id)} onClick={(e) => this.editCard(e, data)}>
                 <div className="list-card-details">
                     {data.Description}
                 </div>
@@ -92,10 +77,13 @@ export default class Activityboard extends Component {
     createNewCard(e, list) {
         this.props.createCardBody(e, list);
     }
+    updateCard(e, list) {
+        this.props.updateCard(e, list);
+    }
     render() {
         return (
             <div className="activityboard">
-                <CreateEditCard modalStatus={this.state.openModal} listName={this.state.listName} closeModal={this.closeModal} modalType={this.state.modalType} createCard={this.createNewCard} cardData={this.state.cardPassData} />
+                <CreateEditCard modalStatus={this.state.openModal} listName={this.state.listName} closeModal={this.closeModal} modalType={this.state.modalType} createCard={this.createNewCard} updateCard={this.updateCard} cardData={this.state.cardPassData} deleteCard={this.deleteCard} />
                 <div className="board" onDragOver={(e) => this.onDragOver(e)} onDrop={(e) => { this.onDrop(e, this.state.listName) }}>
                     <div className="list">
                         <div className="list-header">
