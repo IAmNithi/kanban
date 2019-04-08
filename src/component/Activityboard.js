@@ -80,6 +80,9 @@ export default class Activityboard extends Component {
     updateCard(e, list) {
         this.props.updateCard(e, list);
     }
+    deleteList(){
+        this.props.deleteList(this.state.listName);
+    }
     render() {
         return (
             <div className="activityboard">
@@ -94,9 +97,14 @@ export default class Activityboard extends Component {
                                 return this.renderList(data, index);
                             })}
                         </div>
+                        <p draggable={false}>
                         <span onClick={(e) => this.toggleModal(e)} href="#" draggable={false} className="create-new-link text-muted text-left">
                             Add a Card...
                         </span>
+                        <span onClick={(e) => this.deleteList(e)} href="#" draggable={false} className="create-new-link text-muted text-right">
+                            Delete List...
+                        </span>
+                        </p>
                     </div>
                 </div>
             </div>
